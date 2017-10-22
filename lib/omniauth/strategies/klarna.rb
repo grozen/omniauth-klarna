@@ -4,8 +4,8 @@ require 'omniauth/strategies/oauth2'
 module OmniAuth
   module Strategies
     class Klarna < OmniAuth::Strategies::OAuth2
-      PROVIDER_URL = 'https://merchants.klarna.com'
-      CLIENT_OPTIONS = { site: PROVIDER_URL, authorize_url: '/oauth/authorize', token_url: '/oauth/access_token' }
+      PROVIDER_URL = 'https://auth.eu.portal.klarna.com'
+      CLIENT_OPTIONS = { site: PROVIDER_URL, authorize_url: '/auth/realms/merchants/protocol/openid-connect/auth', token_url: '/auth/realms/merchants/protocol/openid-connect/token' }
 
       option :name, 'klarna'
 
